@@ -1,0 +1,9 @@
+#!name=B站每日任务 v5
+#!desc=每天 8:38 检查并补做 B 站每日任务（登录/观看/分享/投币），只投 1 枚，不碰银瓜子/B币/充电
+#!system=ios
+#!arguments=login:1,watch:1,share:1,coin:1
+#!arguments-desc=login：登录态检查（关闭则整体跳过）\nwatch：观看任务检测（只检测不模拟播放）\nshare：分享任务自动补做（需 bili_jct）\ncoin：投币任务，每次只投 1 枚，硬币不足自动跳过
+#!category=签到
+
+[Script]
+BiliCheckinV5 = type=cron,cronexp="38 8 * * *",script-path=https://raw.githubusercontent.com/xxesc/surge-scripts/main/bili-checkin-v5.js,wake-system=true,timeout=60
