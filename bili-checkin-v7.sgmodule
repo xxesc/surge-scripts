@@ -1,0 +1,9 @@
+#!name=B站每日任务 v7
+#!desc=每天 8:38 检查并补做 B 站每日任务，四行通知（标题/账号/已完成/未完成），投币数量可配置
+#!system=ios
+#!arguments=login:1,watch:1,share:1,coin:1
+#!arguments-desc=login：登录态检查（关闭则整体跳过）\nwatch：观看任务检测（只检测不模拟播放）\nshare：分享任务自动补做（需 bili_jct）\ncoin：投币枚数 0-5，0=不投，硬币不足或经验已满会自动少投
+#!category=签到
+
+[Script]
+BiliCheckinV7 = type=cron,cronexp="38 8 * * *",script-path=https://raw.githubusercontent.com/xxesc/surge-scripts/main/bili-checkin-v7.js,wake-system=true,timeout=60
